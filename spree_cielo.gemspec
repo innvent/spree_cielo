@@ -10,12 +10,12 @@ Gem::Specification.new do |s|
   s.version     = SpreeCielo::VERSION
   s.authors     = ["Fábio Luiz Nery de Miranda"]
   s.email       = ["fabio@miranti.net.br"]
-  s.homepage    = "https://github.com/fabiolnm/spree_cielo"
+  s.homepage    = "https://github.com/innvent/spree_cielo"
   s.summary     = "A gem providing Cielo Gateways for Spree Commerce"
   s.description = ""
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
 
-  s.add_dependency "spree_core", "1.2.2"
-  s.add_dependency "cieloz", "0.0.5"
+  s.add_dependency "spree_core", "~>1.2.2"
+  s.add_dependency "cieloz", "~>0.0.5"
 end
