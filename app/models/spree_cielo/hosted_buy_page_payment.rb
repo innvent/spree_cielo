@@ -51,7 +51,7 @@ module SpreeCielo
 
       def api_number
         if preferences[:test_mode]
-          Cieloz::DadosEc::TEST_MOD_CIELO.numero
+          Cieloz::Homologacao::Credenciais::CIELO[:numero]
         else
           preferences[:api_number]
         end
@@ -59,7 +59,7 @@ module SpreeCielo
 
       def api_key
         if preferences[:test_mode]
-          Cieloz::DadosEc::TEST_MOD_CIELO.chave
+          Cieloz::Homologacao::Credenciais::CIELO[:chave]
         else
           preferences[:api_key]
         end
