@@ -98,7 +98,14 @@ module SpreeCielo
           soft_descriptor: soft_descriptor
 
         pagamento = Cieloz::RequisicaoTransacao::FormaPagamento.new
-                    .parcelado_loja source.flag, source.installments
+        pagamento.bandeira = source.flag
+        pagamento.parcelas = source.installments
+        #TODO: Fix me #142
+        if source.installments == 1 then
+          pagamento.produto = 1
+        else
+          pagamento.produto = 2
+        end
 
         txn = Cieloz::RequisicaoTransacao.new
         txn.dados_ec = ec
@@ -109,13 +116,14 @@ module SpreeCielo
         txn.nao_capturar_automaticamente
 
         response, log = process txn, :criada?
-        source.payment.send :record_log, log
+        #source.payment.send :record_log, log
         response
       end
 
       private
       def ec
-        Cieloz::DadosEc.new numero: api_number, chave: api_key
+        a = Cieloz::Requisicao::DadosEc.new numero: api_number, chave: api_key
+        a
       end
 
       def process operation, success_criteria

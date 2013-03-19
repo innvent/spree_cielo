@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/fabiolnm/cieloz.git
-  revision: 8ac5dc58462afee7f1c7d8723475ce54163ca4c9
+  remote: git://github.com/innvent/cieloz.git
+  revision: 1a039ac5ff119d8e6f21e67a874310a1f6486321
   specs:
     cieloz (0.0.8)
       activemodel
