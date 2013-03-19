@@ -1,8 +1,8 @@
 GIT
-  remote: git://github.com/innvent/cieloz.git
-  revision: fbd2ace78fa42c7a3432188cdd140a64727036a3
+  remote: git://github.com/fabiolnm/cieloz.git
+  revision: 8ac5dc58462afee7f1c7d8723475ce54163ca4c9
   specs:
-    cieloz (0.0.5)
+    cieloz (0.0.8)
       activemodel
       activesupport
       nokogiri
@@ -11,7 +11,7 @@ PATH
   remote: .
   specs:
     spree_cielo (0.0.1)
-      cieloz (= 0.0.5)
+      cieloz (~> 0.0.5)
       spree_core (= 1.2.4)
 
 GEM

@@ -16,5 +16,5 @@
 <p class="field">
   <%= label_tag t 'spree.cielo.payment.installments' %>
   <%= select_tag "payment_source[#{payment_method.id}][installments]",
-    options_for_select(1..Cieloz::MAX_INSTALLMENTS, installments), prompt: 'Selecione' %>
+    options_for_select(1..Cieloz::Configuracao::max_parcelas, installments), prompt: 'Selecione' %>
 </p>
